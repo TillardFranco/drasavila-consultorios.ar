@@ -1,0 +1,83 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Primary Palette */
+  --sage:        #ACC7BE;
+  --sage-light:  #BDDAD0;
+  --sage-dark:   #7DA398;
+  --warm:        #CCAA90;
+  --warm-light:  #DDD0C4;
+  --warm-neutral:#D6C8BE;
+  --blush:       #CEBAB0;
+  --forest:      #3D5F56;
+  --forest-soft: #6B8A80;
+  --cream:       #F0E6DC;
+
+  /* Utility */
+  --white:       #FFFFFF;
+  --glass:       rgba(255,255,255,0.72);
+  --glass-strong:rgba(255,255,255,0.88);
+  --shadow-s:    rgba(61,95,86,0.08);
+  --shadow-m:    rgba(61,95,86,0.15);
+  --shadow-l:    rgba(61,95,86,0.25);
+
+  /* Gradients */
+  --grad-cta:    linear-gradient(135deg, #CCAA90 0%, #7DA398 50%, #CCAA90 100%);
+  --grad-hero:   linear-gradient(180deg, var(--cream) 0%, #E8DDD4 100%);
+  --grad-dark:   linear-gradient(135deg, var(--forest) 0%, #4A7268 50%, var(--sage-dark) 100%);
+  --grad-divider:linear-gradient(90deg, var(--warm), var(--sage-dark));
+
+  /* Typography */
+  --font-display:'Cormorant Garamond', Georgia, serif;
+  --font-body:   'Nunito', -apple-system, sans-serif;
+
+  /* Spacing */
+  --sp-xs: 0.5rem;  --sp-sm: 1rem;  --sp-md: 1.5rem;
+  --sp-lg: 2rem;    --sp-xl: 3rem;  --sp-2xl:4rem;  --sp-3xl:6rem;
+
+  /* Radius */
+  --r-sm: 0.75rem; --r-md: 1.25rem; --r-lg: 2rem; --r-xl: 2.5rem; --r-pill: 999px;
+
+  /* Ease */
+  --ease: cubic-bezier(0.16,1,0.3,1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+html {
+  min-height: 100%;
+}
+body {
+  min-height: 100%;
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--forest);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; }
+
+/* Keyframes */
+@keyframes fadeInUp   { from { opacity:0; transform:translateY(40px); }  to { opacity:1; transform:translateY(0); } }
+@keyframes fadeInDown { from { opacity:0; transform:translateY(-30px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeInScale{ from { opacity:0; transform:scale(0.92); }       to { opacity:1; transform:scale(1); } }
+@keyframes slideLeft  { from { opacity:0; transform:translateX(-60px); } to { opacity:1; transform:translateX(0); } }
+@keyframes slideRight { from { opacity:0; transform:translateX(60px); }  to { opacity:1; transform:translateX(0); } }
+@keyframes float      { 0%,100% { transform:translateY(0) scale(1); }   50% { transform:translateY(-25px) scale(1.03); } }
+@keyframes heartbeat  { 0%,100%{transform:scale(1)} 14%{transform:scale(1.25)} 28%{transform:scale(1)} 42%{transform:scale(1.15)} 56%{transform:scale(1)} }
+@keyframes shimmer    { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+@keyframes gradShift  { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

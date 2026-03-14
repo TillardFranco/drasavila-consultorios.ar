@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drasavila-consultorios.ar/sitemap.xml
