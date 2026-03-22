@@ -93,7 +93,7 @@ const STATS = [
   { num: '2', label: 'Especialidades' },
 ]
 
-const CTA_URL = 'https://frontmy.com'
+const CTA_URL = 'https://consultoriodrasavila.site.agendapro.com/ar'
 
 /* ── Reveal Component ── */
 function Reveal({ children, className = '', delay = 0, as: Tag = 'div' }) {
