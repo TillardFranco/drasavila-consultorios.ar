@@ -181,7 +181,11 @@ export default function App() {
             <div className={`${s.blob} ${s.blob2}`} />
             <div className={`${s.blob} ${s.blob3}`} />
             <div className={s.heroCircle}>
-              <HeartPulse width={64} height={64} />
+              <img
+                src="/Dras-Avila_fondo-removebg-preview.png"
+                alt="Dras. Avila — Consultorio médico"
+                className={s.heroCircleImg}
+              />
             </div>
           </div>
         </section>

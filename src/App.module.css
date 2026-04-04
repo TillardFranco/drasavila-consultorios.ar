@@ -276,20 +276,21 @@
 }
 
 .heroCircle {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: var(--glass-strong);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--sage-dark);
-  box-shadow: 0 12px 40px var(--shadow-s);
+  width: 400px;
+  height: 440px;
+  position: relative;
   z-index: 1;
   animation: fadeInScale 1s var(--ease) 0.4s both;
+  filter: drop-shadow(0 20px 40px rgba(90,120,100,0.22));
+  transform: translateY(-40px);
+}
+
+.heroCircleImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  display: block;
 }
 
 /* ═══════════════════════════════════════
